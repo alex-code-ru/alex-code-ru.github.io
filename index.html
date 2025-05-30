@@ -37,7 +37,12 @@
         <a href="Link">Programm</a>
         <iframe id="123"></iframe>
         <script>
-           document.getElementById('123').src = 'https://mgtmap.ru';
+            const sites = [
+              '/ad/1.html',
+              '/ad/2.html',
+              '/ad/3.html',
+            ];
+           document.getElementById('123').src = sites[Math.floor(Math.random() * 3)];
         </script>
     </body>
     <p></p>
