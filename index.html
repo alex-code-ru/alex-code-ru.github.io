@@ -30,19 +30,25 @@
         a:hover {
             background: #ff000073;
         }
+
+        #a {
+            width: 500px ;
+            height: 250px;
+            border: none ;
+           }
     </style>
     </head>
     <body>
         <h1>Pl</h1>
         <a href="Link">Programm</a>
-        <iframe id="123"></iframe>
+        <iframe id="a"></iframe>
         <script>
             const sites = [
               '/ad/1.html',
               '/ad/2.html',
               '/ad/3.html',
             ];
-           document.getElementById('123').src = sites[Math.floor(Math.random() * 3)];
+           document.getElementById('a').src = sites[Math.floor(Math.random() * 3)];
         </script>
     </body>
     <p></p>
