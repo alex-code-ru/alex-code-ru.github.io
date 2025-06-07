@@ -53,5 +53,62 @@
             ];
            document.getElementById('a').src = sites[Math.floor(Math.random() * 4)];
         </script>
+       
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        Добро Пожаловать на мой сайт
+        
+        <a href="#" onclick="PopUpHide(); return false;">Закрыть</a>
+    </div>
+</div>
+
+<style>
+    * {
+        font-family: Arial;
+    }
+    .b-container {
+        width: 200px;
+        height: 150px;
+        background-color: #ccc;
+        margin: 0px auto;
+        padding: 10px;
+        font-size: 30px;
+        color: #fff;
+    }
+    .b-popup {
+        display: none; /* По умолчанию скрыт */
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Чтобы был поверх всего */
+    }
+    .b-popup .b-popup-content {
+        margin: 100px auto;
+        width: 200px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+</style>
+
+<!-- Подключаем jQuery (лучше последнюю версию) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Можно сразу показать popup (если нужно)
+        // PopUpShow();
+    });
+
+    function PopUpShow() {
+        $("#popup1").fadeIn(200); // Плавное появление
+    }
+    function PopUpHide() {
+        $("#popup1").fadeOut(200); // Плавное скрытие
+    }
+</script>
     </body>
 </html>
